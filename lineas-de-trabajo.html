@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Líneas de Trabajo - Corporación Cultural Antulelbún</title>
+    <link rel="stylesheet" href="assets/styles.css"> <style>
+        /* Estilos Generales Consistentes (similares a las otras páginas) */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #3A5F0B;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header img.logo-img { /* Clase específica para el logo */
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        nav {
+            background-color: #558B2F;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 0.95em;
+            margin: 5px 5px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #3A5F0B;
+        }
+
+        /* Hero Section - Imagen principal con eslogan (ESTO ES PARA INDEX, PERO LO MANTENEMOS POR SI SE USA EN OTRA PÁGINA) */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            max-height: 600px; 
+            overflow: hidden; 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        .hero-section img.hero-image {
+            width: 100%;
+            height: auto; 
+            display: block; 
+            object-fit: cover; 
+            max-height: 600px; 
+        }
+        .hero-slogan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6); 
+            padding: 20px 30px;
+            border-radius: 8px;
+            font-size: 2em; 
+            font-weight: bold;
+            text-align: center;
+            width: 80%; 
+            max-width: 700px; 
+        }
+         @media (max-width: 768px) {
+            .hero-slogan {
+                font-size: 1.5em;
+                padding: 15px 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-slogan {
+                font-size: 1.2em;
+                padding: 10px 15px;
+                width: 90%;
+            }
+        }
+
+
+        .main-content-centered {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .main-content-centered h2 { /* Título de sección (Noticias, Líneas de Trabajo, etc.) */
+            color: #3A5F0B;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        /* Sección de Bienvenida (Específico de Index, pero se mantiene por si acaso) */
+        .welcome-section {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center; 
+        }
+        .welcome-section p {
+            color: #444;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .welcome-section p strong {
+            font-size: 1.2em;
+            color: #3A5F0B;
+        }
+
+
+        /* Estilo para cada noticia (o bloque de contenido similar) */
+        .noticia { /* Usado en Index */
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .noticia img.noticia-imagen {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto; 
+            border-radius: 6px;
+        }
+        .noticia h3 { 
+            color: #333;
+            text-align: left; 
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .noticia p {
+            text-align: justify;
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        /* Para el enlace del formulario en Noticia 2 (Index) */
+        .formulario-link-container {
+            text-align: center; 
+            margin-top: 20px;
+        }
+        .formulario-link-container img.formulario-imagen {
+             max-width: 100%; 
+             height: auto;
+             border: 1px solid #ccc;
+             border-radius: 6px;
+             margin-bottom: 10px;
+        }
+        .formulario-link-container a.boton-formulario {
+            display: inline-block;
+            background-color: #558B2F;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .formulario-link-container a.boton-formulario:hover {
+            background-color: #3A5F0B;
+        }
+
+        /* NUEVOS ESTILOS PARA "LÍNEAS DE TRABAJO" */
+        .main-content-centered ol {
+            list-style: none; /* Quitar numeración si se prefiere un estilo de "tarjetas" */
+            padding-left: 0;  /* Quitar padding por defecto de la lista */
+        }
+
+        .linea-item { /* Estilo para cada <li> en líneas de trabajo */
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .linea-item img.linea-imagen {
+            max-width: 100%; /* Las imágenes ocuparán el ancho disponible dentro de su contenedor */
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto; /* Centrada y con espacio abajo */
+            border-radius: 6px;
+        }
+        .linea-item strong { /* Título de cada línea de trabajo */
+            display: block; 
+            color: #3A5F0B; /* Color del título principal de sección para destacar */
+            font-size: 1.5em; 
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .linea-item p {
+            text-align: justify;
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+
+        footer {
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #3A5F0B;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Corporación Cultural Antulelbún</h1>
+        <img src="assets/images/LogoP.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
+        <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
+        <a href="proyectos-futuros.html">Proyectos Futuros</a>
+        <a href="noticias.html">Noticias</a>
+    </nav>
+
+    <main>
+        <div class="main-content-centered">
+            <section> <h2>Líneas de Trabajo</h2>
+                <ol>
+                    <li class="linea-item">
+                        <strong>Fortalecimiento de ecosistemas culturales y creativos</strong>
+                        <img src="assets/images/Foto 8.jpg" alt="Ecosistemas Culturales" class="linea-imagen">
+                        <p>Su propósito es impulsar la articulación de agentes culturales del territorio mediante el desarrollo de un mapeo cultural participativo y encuentros estratégicos que fomenten la economía creativa en el territorio. Este proceso busca reconocer y potenciar el aporte de los actores culturales en la sostenibilidad del territorio, promoviendo su integración en redes nacionales e internacionales.</p>
+                    </li>
+                    <li class="linea-item">
+                        <strong>Capacitación y desarrollo profesional</strong>
+                        <img src="assets/images/Foto 9.jpg" alt="Capacitación" class="linea-imagen">
+                        <p>El objetivo es implementar un espacio colaborativo de formación y capacitación destinado a agentes culturales del territorio lacustre andino de la región de La Araucanía, con un enfoque inclusivo y sostenible. Se priorizarán metodologías innovadoras, el acceso equitativo a conocimientos y la integración de herramientas tecnológicas para fortalecer la gestión cultural y la participación activa en políticas públicas.</p>
+                    </li>
+                    <li class="linea-item">
+                        <strong>Acceso a la cultura y participación comunitaria</strong>
+                        <img src="assets/images/Foto 10.jpg" alt="Participación Comunitaria" class="linea-imagen">
+                        <p>Esta línea de trabajo pretende desarrollar programas artístico-culturales dirigidos a comunidades vulnerables, asegurando su acceso a expresiones creativas y el derecho a la diversidad cultural. Se fomentará el trabajo voluntario y la gestión de financiamiento para garantizar la continuidad de estos proyectos, priorizando acciones que contribuyan a la inclusión social, la equidad de género y la preservación del patrimonio cultural.</p>
+                    </li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com">corporacionantulelbun@gmail.com</a></p>
+        <p>Síguenos: 
+            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> | 
+            <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank">Facebook</a>
+        </p>
+    </footer>
+</body>
+</html>

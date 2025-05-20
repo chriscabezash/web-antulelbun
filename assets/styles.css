@@ -1,0 +1,43 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #426A5A;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #8BB174;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #426A5A;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.noticia {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}

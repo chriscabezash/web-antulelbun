@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Noticias - Corporación Cultural Antulelbún</title>
+    <link rel="stylesheet" href="assets/styles.css"> <style>
+        /* Estilos Generales Consistentes (similares a las otras páginas) */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #3A5F0B;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header img.logo-img { /* Clase específica para el logo */
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        nav {
+            background-color: #558B2F;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 0.95em;
+            margin: 5px 5px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #3A5F0B;
+        }
+
+        /* Hero Section - Ya no se usa en esta página de noticias, pero se mantiene en CSS por si se usa en otras */
+        .hero-section {
+            position: relative; 
+            width: 100%;
+            max-height: 600px; 
+            overflow: hidden; 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        .hero-section img.hero-image {
+            width: 100%;
+            height: auto; 
+            display: block; 
+            object-fit: cover; 
+            max-height: 600px; 
+        }
+        .hero-slogan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6); 
+            padding: 20px 30px;
+            border-radius: 8px;
+            font-size: 2em; 
+            font-weight: bold;
+            text-align: center;
+            width: 80%; 
+            max-width: 700px; 
+        }
+         @media (max-width: 768px) {
+            .hero-slogan {
+                font-size: 1.5em;
+                padding: 15px 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-slogan {
+                font-size: 1.2em;
+                padding: 10px 15px;
+                width: 90%;
+            }
+        }
+
+
+        .main-content-centered {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .main-content-centered h2 { /* Título de Noticias */
+            color: #3A5F0B;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        /* Sección de Bienvenida - Ya no se usa en esta página de noticias, pero se mantiene en CSS por si se usa en otras */
+        .welcome-section {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center; 
+        }
+        .welcome-section p {
+            color: #444;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .welcome-section p strong {
+            font-size: 1.2em;
+            color: #3A5F0B;
+        }
+
+
+        /* Estilo para cada noticia */
+        .noticia {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .noticia img.noticia-imagen {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto; 
+            border-radius: 6px;
+        }
+        .noticia h3 { /* Título de la noticia (Noticia 1, Noticia 2) */
+            color: #333;
+            text-align: left; 
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .noticia p {
+            text-align: justify;
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        /* Para el enlace del formulario en Noticia 2 */
+        .formulario-link-container {
+            text-align: center; 
+            margin-top: 20px;
+        }
+        .formulario-link-container img.formulario-imagen {
+             max-width: 100%; 
+             height: auto;
+             border: 1px solid #ccc;
+             border-radius: 6px;
+             margin-bottom: 10px;
+        }
+        .formulario-link-container a.boton-formulario {
+            display: inline-block;
+            background-color: #558B2F;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .formulario-link-container a.boton-formulario:hover {
+            background-color: #3A5F0B;
+        }
+
+
+        footer {
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #3A5F0B;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Corporación Cultural Antulelbún</h1>
+        <img src="assets/images/LogoP.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
+        <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
+        <a href="proyectos-futuros.html">Proyectos Futuros</a>
+        <a href="noticias.html">Noticias</a>
+    </nav>
+
+    <main>
+        
+       
+
+        <div class="main-content-centered">
+            <section id="noticias"> <h2>Noticias</h2>
+                <div class="noticia">
+           
+                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 500px;"> 
+                    <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
+                    <p>En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".</p>
+                    <p>El evento, previsto para domingo 25 de mayo a las 11:00 horas, ofrecerá un recorrido guiado por nueve puntos emblemáticos de la ciudad, con actuaciones que darán vida a simpáticos personajes de inicios de la fundación de la comuna para relatar pasajes contenidos en Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.</p>
+                    <p>Esta iniciativa no solo busca acercar la comunidad y visitantes al pasado de Pucón, sino que también promueve el acceso gratuito al conocimiento histórico y la participación activa en la conservación de la identidad cultural. Para ello, el evento contará con herramientas digitales como un código QR que permitirá acceder a un mapa interactivo con fotografías antiguas de los lugares visitados.</p>
+                    <p>El equipo de producción está conformado por tres actores y una profesional encargada del material digital, quienes, con vestuarios teatrales y elementos auditivos como megáfonos, transformarán cada parada en un episodio inmersivo de la historia local. Se espera que esta celebración del patrimonio logre consolidarse como un hito cultural que refuerce el vínculo entre la ciudad y su historia, permitiendo a los asistentes vivir el pasado a través de una experiencia innovadora y memorable. ¡Pucón se prepara para recorrer su memoria como nunca antes!</p>
+                </div>
+
+                <div class="noticia">
+                    <h3><strong>Convocatoria abierta para el Mapeo Cultural de Pucón y Curarrehue</strong></h3>
+                    <p>La Corporación Cultural Antulelbún invita a todos los agentes culturales de <strong>Pucón y Curarrehue</strong> a participar en el <strong>proceso de mapeo cultural</strong>, una iniciativa diseñada para <strong>conectar a quienes comparten una identidad territorial y fortalecer espacios de vínculo en el futuro.</strong></p>
+                    <p>Este registro busca identificar y visibilizar a artistas, gestores y emprendimientos culturales de ambas comunas, con el propósito de generar redes colaborativas que impulsen el desarrollo del sector. La información recopilada permitirá estructurar futuras instancias de intercambio, capacitación y comercialización, alineadas con estrategias municipales y regionales.</p>
+                    <p>La inscripción es <strong>gratuita y abierta</strong> a todas las personas vinculadas a la creación y gestión cultural en <strong>Pucón y Curarrehue</strong>. Para participar, los interesados deben completar el formulario disponible en las plataformas digitales de la <strong>Corporación Antulelbún</strong> o contactar a la coordinación del proyecto. Este mapeo representa un paso fundamental para el fortalecimiento del ecosistema cultural local, facilitando la articulación entre actores del territorio y asegurando la sustentabilidad del sector. ¡Seamos parte de esta iniciativa y consolidemos juntos el futuro cultural de la Araucanía Lacustre Andina!</p>
+
+                    <div class="formulario-link-container">
+                        <p>Completa el formulario de inscripción aquí:</p>
+                        <a href="https://forms.gle/tfdB4XvcTGo8WMPT9" target="_blank" class="boton-formulario">Acceder al Formulario</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com">corporacionantulelbun@gmail.com</a></p>
+        <p>Síguenos: 
+            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> | 
+            <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank">Facebook</a>
+        </p>
+    </footer>
+</body>
+</html>
