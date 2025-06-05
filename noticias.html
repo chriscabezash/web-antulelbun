@@ -2,29 +2,31 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Noticias - Corporación Cultural Antulelbún</title>
-    <link rel="stylesheet" href="assets/styles.css"> <style>
-        /* Estilos Generales Consistentes (similares a las otras páginas) */
+    <title>Prensa - Corporación Cultural Antulelbún</title>
+    <style>
+        /* Estilos Generales Consistentes (tomados de la página index.html) */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #f7f7f2;
-            color: #333;
+            background-color: #f7f7f2; /* Color de fondo general */
+            color: #333; /* Color de texto principal */
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         header {
-            background-color: #3A5F0B;
-            color: white;
+            background-color: #e8f8c1; /* Fondo del header (igual que en index) */
+            color: white; /* Color de texto del header */
             padding: 15px 0;
             text-align: center;
         }
         header h1 {
             margin: 0;
             font-size: 1.8em;
+            /* Si deseas que el h1 no sea visible cuando hay un logo, puedes usar: */
+            display: none; /* Oculta el h1 para que solo se vea el logo */
         }
         header img.logo-img { /* Clase específica para el logo */
-            width: 250px;
+            width: 350px; /* Ancho del logo, ajustado al de index */
             max-width: 100%;
             height: auto;
             display: block;
@@ -32,7 +34,7 @@
         }
 
         nav {
-            background-color: #558B2F;
+            background-color: #eee5bf; /* Fondo de la barra de navegación (igual que en index) */
             padding: 10px 0;
             text-align: center;
             display: flex;
@@ -40,7 +42,7 @@
             justify-content: center;
         }
         nav a {
-            color: white;
+            color: black; /* Color del texto de los enlaces de navegación (igual que en index) */
             text-decoration: none;
             padding: 8px 12px;
             font-size: 0.95em;
@@ -49,54 +51,8 @@
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #3A5F0B;
+            background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
         }
-
-        /* Hero Section - Ya no se usa en esta página de noticias, pero se mantiene en CSS por si se usa en otras */
-        .hero-section {
-            position: relative; 
-            width: 100%;
-            max-height: 600px; 
-            overflow: hidden; 
-            text-align: center; 
-            margin-bottom: 30px; 
-        }
-        .hero-section img.hero-image {
-            width: 100%;
-            height: auto; 
-            display: block; 
-            object-fit: cover; 
-            max-height: 600px; 
-        }
-        .hero-slogan {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            color: white;
-            background-color: rgba(0, 0, 0, 0.6); 
-            padding: 20px 30px;
-            border-radius: 8px;
-            font-size: 2em; 
-            font-weight: bold;
-            text-align: center;
-            width: 80%; 
-            max-width: 700px; 
-        }
-         @media (max-width: 768px) {
-            .hero-slogan {
-                font-size: 1.5em;
-                padding: 15px 20px;
-            }
-        }
-        @media (max-width: 480px) {
-            .hero-slogan {
-                font-size: 1.2em;
-                padding: 10px 15px;
-                width: 90%;
-            }
-        }
-
 
         .main-content-centered {
             max-width: 900px;
@@ -104,33 +60,12 @@
             padding: 20px;
         }
         .main-content-centered h2 { /* Título de Noticias */
-            color: #3A5F0B;
+            color: #3A5F0B; /* Color del título (igual que en index para h2 de Noticias) */
             text-align: center;
             margin-top: 30px;
             margin-bottom: 25px;
             font-size: 2em;
         }
-
-        /* Sección de Bienvenida - Ya no se usa en esta página de noticias, pero se mantiene en CSS por si se usa en otras */
-        .welcome-section {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            text-align: center; 
-        }
-        .welcome-section p {
-            color: #444;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        .welcome-section p strong {
-            font-size: 1.2em;
-            color: #3A5F0B;
-        }
-
 
         /* Estilo para cada noticia */
         .noticia {
@@ -148,7 +83,7 @@
             margin: 0 auto 20px auto; 
             border-radius: 6px;
         }
-        .noticia h3 { /* Título de la noticia (Noticia 1, Noticia 2) */
+        .noticia h3 { /* Título de la noticia */
             color: #333;
             text-align: left; 
             margin-top: 0;
@@ -168,15 +103,15 @@
             margin-top: 20px;
         }
         .formulario-link-container img.formulario-imagen {
-             max-width: 100%; 
-             height: auto;
-             border: 1px solid #ccc;
-             border-radius: 6px;
-             margin-bottom: 10px;
+            max-width: 100%; 
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 10px;
         }
         .formulario-link-container a.boton-formulario {
             display: inline-block;
-            background-color: #558B2F;
+            background-color: #558B2F; /* Color de botón (igual que en index) */
             color: white;
             padding: 12px 25px;
             text-decoration: none;
@@ -185,20 +120,19 @@
             transition: background-color 0.3s;
         }
         .formulario-link-container a.boton-formulario:hover {
-            background-color: #3A5F0B;
+            background-color: #3A5F0B; /* Color de hover de botón (igual que en index) */
         }
 
-
         footer {
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #f0f0f0; /* Fondo del footer (igual que en index) */
+            color: #333; /* Color de texto del footer (igual que en index) */
             text-align: center;
             padding: 20px;
             margin-top: 30px;
             font-size: 0.9em;
         }
         footer a {
-            color: #3A5F0B;
+            color: #3A5F0B; /* Color de enlaces en el footer (igual que en index) */
             text-decoration: none;
         }
         footer a:hover {
@@ -208,8 +142,7 @@
 </head>
 <body>
     <header>
-        <h1>Corporación Cultural Antulelbún</h1>
-        <img src="assets/images/LogoP.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
+        <img src="assets/images/Logo_Negro.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
     </header>
 
     <nav>
@@ -218,17 +151,14 @@
         <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
         <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
         <a href="proyectos-futuros.html">Proyectos Futuros</a>
-        <a href="noticias.html">Noticias</a>
+        <a href="noticias.html">Prensa</a>
     </nav>
 
     <main>
-        
-       
-
         <div class="main-content-centered">
-            <section id="noticias"> <h2>Noticias</h2>
+            <section id="noticias">
+                <h2>Prensa</h2>
                 <div class="noticia">
-           
                     <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 500px;"> 
                     <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
                     <p>En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".</p>
