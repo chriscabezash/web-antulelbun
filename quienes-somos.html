@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <title>Quiénes Somos - Corporación Cultural Antulelbún</title>
     <style>
-        /* Estilos Generales Consistentes (tomados de codigo 1 y fusionados con codigo 2) */
+        /* Estilos Generales Consistentes (tomados de la página index.html) */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #f7f7f2;
-            color: #333;
+            background-color: #f7f7f2; /* Color de fondo general */
+            color: #333; /* Color de texto principal */
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         header {
-            background-color: #3A5F0B;
-            color: white;
+            background-color: #e8f8c1; /* Fondo del header (igual que en index) */
+            color: white; /* Color de texto del header */
             padding: 15px 0;
             text-align: center;
         }
         header h1 {
             margin: 0;
             font-size: 1.8em;
+            /* Si deseas que el h1 no sea visible cuando hay un logo, puedes usar: */
+            /* display: none; */
         }
         header img.logo-img { /* Clase específica para el logo */
-            width: 250px;
+            width: 350px; /* Ancho del logo, ajustado al de index */
             max-width: 100%;
             height: auto;
             display: block;
@@ -32,7 +34,7 @@
         }
 
         nav {
-            background-color: #558B2F;
+            background-color: #eee5bf; /* Fondo de la barra de navegación (igual que en index) */
             padding: 10px 0;
             text-align: center;
             display: flex;
@@ -40,7 +42,7 @@
             justify-content: center;
         }
         nav a {
-            color: white;
+            color: black; /* Color del texto de los enlaces de navegación (igual que en index) */
             text-decoration: none;
             padding: 8px 12px;
             font-size: 0.95em;
@@ -49,22 +51,22 @@
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #3A5F0B;
+            background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
         }
         
         /* Estilos para el contenido principal centrado */
         main {
-            padding: 0px 20px 20px 20px; /* Ajuste para que no haya padding superior directo en main si .main-content-centered ya lo tiene */
+            padding: 0px 20px 20px 20px;
         }
         .main-content-centered {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
-        .main-content-centered h2, /* Título principal de la página (Quiénes Somos) */
-        .main-content-centered h3, /* Subtítulos (Visión, Misión, etc.) */
-        .main-content-centered h4 { /* Títulos menores (Director, etc.) */
-            color: #3A5F0B; /* Color verde para los títulos */
+        .main-content-centered h2,
+        .main-content-centered h3,
+        .main-content-centered h4 {
+            color: #3A5F0B; /* Color verde para los títulos (igual que en index para h2 de Noticias) */
             text-align: center;
             margin-top: 30px;
             margin-bottom: 20px;
@@ -73,121 +75,117 @@
         .main-content-centered h3 { font-size: 1.7em; }
         .main-content-centered h4 { font-size: 1.4em; margin-bottom: 10px;}
 
-
-        /* Estilo para secciones de contenido (adaptado de .content-section de codigo 2) */
+        /* Estilo para secciones de contenido (adaptado de .noticia en index) */
         .content-section {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
+            background-color: #ffffff; /* Fondo de las secciones de contenido */
+            border: 1px solid #e0e0e0; /* Borde de las secciones de contenido */
             border-radius: 8px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra de las secciones de contenido */
         }
         .content-section p {
             text-align: justify; 
-            color: #444;
+            color: #444; /* Color de texto de los párrafos */
             margin-bottom: 15px;
             line-height: 1.7;
         }
-         /* Párrafo introductorio de "Quiénes Somos" y el que precede a la lista */
+        /* Párrafo introductorio de "Quiénes Somos" y el que precede a la lista */
         .intro-paragraph {
-            text-align: justify; /* O text-align: left; si prefieres */
+            text-align: justify;
             color: #444;
             margin-bottom: 15px;
             line-height: 1.7;
         }
-        .intro-paragraph strong { /* Para el título de la sección si se usa dentro de un p */
-             display: block;
-             text-align: center;
-             font-size: 1.2em;
-             color: #3A5F0B;
-             margin-bottom: 15px;
+        .intro-paragraph strong {
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            color: #3A5F0B; /* Color verde para el texto resaltado */
+            margin-bottom: 15px;
         }
 
         /* Estilos para imágenes generales dentro de .content-section */
         .content-section img {
-            max-width: 100%; 
+            max-width: 100%;  
             height: auto;   
-            display: block;  
-            margin: 20px auto; 
+            display: block;   
+            margin: 20px auto;  
             border-radius: 6px;
         }
         
-        /* Para la lista de miembros de la Asamblea - MEJORADO */
-        .asamblea-title { /* Título antes de la lista */
+        /* Para la lista de miembros de la Asamblea */
+        .asamblea-title {
             text-align: center;
-            color: #3A5F0B; /* Color del título */
-            font-size: 1.3em;  /* Tamaño de fuente para el título de la asamblea */
+            color: #3A5F0B; /* Color del título de la asamblea */
+            font-size: 1.3em;
             margin-top: 20px;
-            margin-bottom: 15px; /* Espacio antes de la lista */
+            margin-bottom: 15px;
             font-weight: bold;
         }
         .asamblea-members {
-            list-style: none; 
-            padding-left: 0; 
-            text-align: center; /* Centra el bloque de la lista si tiene un ancho definido, pero el centrado principal es en LI */
-            margin-bottom: 20px; /* Espacio después de la lista, antes de la imagen del organigrama */
+            list-style: none;  
+            padding-left: 0;  
+            text-align: center;
+            margin-bottom: 20px;
         }
         .asamblea-members li {
-            margin-bottom: 12px; /* Espacio entre miembros */
-            font-size: 1.1em;   /* Tamaño de fuente legible */
-            color: #333;       /* Color de texto principal para nombres */
-            text-align: center; /* Asegura que cada item esté centrado */
-            line-height: 1.5;   /* Espaciado de línea para mejor lectura */
+            margin-bottom: 12px;
+            font-size: 1.1em;    
+            color: #333;        
+            text-align: center;
+            line-height: 1.5;    
         }
-        .asamblea-members li strong { /* Para resaltar el cargo */
-            color: #222;          /* Color más oscuro para el cargo */
-            display: block;        /* Hace que el cargo ocupe su propia línea o resalte más */
-            margin-bottom: 3px;   /* Pequeño espacio entre el cargo y el nombre si es block */
-            font-weight: 600;      /* Un poco más de peso para el cargo */
+        .asamblea-members li strong {
+            color: #222;          
+            display: block;         
+            margin-bottom: 3px;     
+            font-weight: 600;       
         }
-         /* Si quieres el cargo y el nombre en la misma línea, pero el cargo en bloque: */
         .asamblea-members li span.member-name {
-            display: block; /* Nombre en línea separada si el strong es block */
-            color: #444; /* Ligeramente más suave para el nombre si se desea diferenciar */
+            display: block;
+            color: #444;
         }
 
-
-        /* Para el equipo de trabajo (tomado de codigo 2) */
+        /* Para el equipo de trabajo */
         .team-member {
-            text-align: center; 
+            text-align: center;  
             margin-bottom: 40px;
         }
         .team-member img {
-            max-width: 180px; /* Tamaño ajustado para fotos del equipo */
-            border-radius: 50%; 
+            max-width: 180px;
+            border-radius: 50%;  
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 15px;
         }
         .team-member p {
-            text-align: justify; 
+            text-align: justify;  
             font-size: 0.95em;
             color: #444;
         }
-        .team-member p strong { /* Nombre del miembro del equipo */
+        .team-member p strong {
             display: block;
             font-size: 1.2em;
             color: #333;
             margin-bottom: 8px;
-            text-align: center; /* Centrar el nombre */
+            text-align: center;
         }
-        .team-member h4 { /* Cargo del miembro del equipo */
-             margin-bottom: 15px;
-             font-size: 1.3em;
+        .team-member h4 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
         }
-
 
         footer {
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #f0f0f0; /* Fondo del footer (igual que en index) */
+            color: #333; /* Color de texto del footer (igual que en index) */
             text-align: center;
             padding: 20px;
             margin-top: 30px;
             font-size: 0.9em;
         }
         footer a {
-            color: #3A5F0B;
+            color: #3A5F0B; /* Color de enlaces en el footer (igual que en index) */
             text-decoration: none;
         }
         footer a:hover {
@@ -197,8 +195,7 @@
 </head>
 <body>
     <header>
-        <h1>Corporación Cultural Antulelbún</h1>
-        <img src="assets/images/LogoP.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
+        <img src="assets/images/Logo_Negro.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
     </header>
 
     <nav>
@@ -207,7 +204,7 @@
         <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
         <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
         <a href="proyectos-futuros.html">Proyectos Futuros</a>
-        <a href="noticias.html">Noticias</a>
+        <a href="noticias.html">Prensa</a>
     </nav>
 
     <main>
@@ -222,7 +219,8 @@
                     <li><strong>Presidente Directorio y Representante Legal:</strong> <span class="member-name">Carlos Gray Aguirre</span></li>
                     <li><strong>Tesorero Directorio:</strong> <span class="member-name">Armando Zapata Silva</span></li>
                     <li><strong>Secretaria Directorio:</strong> <span class="member-name">Graciela Guajardo Hernández</span></li>
-                    <li><span class="member-name">Maria Cristina Hurtado Guzmán</span></li> <li><span class="member-name">Tomás Alejandro Billike Brancoli</span></li> </ul>
+                    <li><span class="member-name">Maria Cristina Hurtado Guzmán</span></li> <li><span class="member-name">Tomás Alejandro Billike Brancoli</span></li> 
+                </ul>
                 <img src="assets/images/Foto 4_organigrama Antulelbun.jpg" alt="Organigrama de la Corporación Cultural Antulelbún" style="max-width: 700px;">
             </section>
 
