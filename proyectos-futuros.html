@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <title>Proyectos Futuros - Corporación Cultural Antulelbún</title>
     <style>
-        /* Estilos Generales Consistentes (Basados en el formato anterior) */
+        /* Estilos Generales Consistentes (tomados de la página index.html) */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #f7f7f2;
-            color: #333;
+            background-color: #f7f7f2; /* Color de fondo general */
+            color: #333; /* Color de texto principal */
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         header {
-            background-color: #3A5F0B;
-            color: white;
+            background-color: #e8f8c1; /* Fondo del header (igual que en index) */
+            color: white; /* Color de texto del header */
             padding: 15px 0;
             text-align: center;
         }
         header h1 {
             margin: 0;
             font-size: 1.8em;
+            /* Si deseas que el h1 no sea visible cuando hay un logo, puedes usar: */
+            /* display: none; */
         }
         header img.logo-img { /* Clase específica para el logo */
-            width: 250px;
+            width: 350px; /* Ancho del logo, ajustado al de index */
             max-width: 100%;
             height: auto;
             display: block;
@@ -32,7 +34,7 @@
         }
 
         nav {
-            background-color: #558B2F;
+            background-color: #eee5bf; /* Fondo de la barra de navegación (igual que en index) */
             padding: 10px 0;
             text-align: center;
             display: flex;
@@ -40,7 +42,7 @@
             justify-content: center;
         }
         nav a {
-            color: white;
+            color: black; /* Color del texto de los enlaces de navegación (igual que en index) */
             text-decoration: none;
             padding: 8px 12px;
             font-size: 0.95em;
@@ -49,13 +51,10 @@
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #3A5F0B;
+            background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
         }
         
         /* Estilos para el contenido principal centrado */
-        main {
-            padding: 0px 20px 20px 20px;
-        }
         .main-content-centered {
             max-width: 900px;
             margin: 0 auto;
@@ -64,22 +63,12 @@
         .main-content-centered > h2 { /* Título principal de la página (Proyectos Futuros) */
             color: #3A5F0B; 
             text-align: center;
-            margin-top: 30px; /* Margen superior como en otros h2 */
-            margin-bottom: 40px; /* Espacio antes de que empiecen los proyectos */
+            margin-top: 30px;
+            margin-bottom: 40px;
             font-size: 2em;
         }
-         /* Estilos generales para h3 dentro de secciones de contenido si se necesita consistencia */
-        .main-content-centered .content-section h3,
-        .main-content-centered .proyecto-futuro h3 { /* Títulos de cada proyecto */
-            color: #3A5F0B; /* Verde para los títulos de proyecto */
-            text-align: center;
-            font-size: 1.7em; /* Tamaño consistente con otros h3 */
-            margin-top: 0; /* Sin margen superior si es el primer elemento de la sección */
-            margin-bottom: 20px;
-        }
-
-
-        /* Estilos para secciones de proyectos futuros (adaptado para ser como .content-section) */
+        
+        /* Estilos para cada sección de proyecto futuro */
         .proyecto-futuro {
             background-color: #ffffff; /* Fondo blanco como otras secciones de contenido */
             border: 1px solid #e0e0e0;
@@ -87,6 +76,13 @@
             padding: 25px;
             margin-bottom: 30px; /* Margen consistente */
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .proyecto-futuro h3 { /* Títulos de cada proyecto */
+            color: #3A5F0B; /* Verde para los títulos de proyecto */
+            text-align: center;
+            font-size: 1.7em;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
         .proyecto-futuro p {
             text-align: justify; 
@@ -105,11 +101,11 @@
         .proyecto-futuro em { /* Estilo para texto en cursiva (postulaciones) */
             color: #555;
             display: block;
-            margin-top: 5px; /* Espacio sobre este texto */
-            margin-bottom: 15px; /* Espacio debajo de este texto */
+            margin-top: 5px;
+            margin-bottom: 15px;
             text-align: center;
             font-style: italic;
-            font-size: 0.9em; /* Ligeramente más pequeño */
+            font-size: 0.9em;
         }
         .proyecto-futuro ol {
             padding-left: 30px; /* Más indentación para la lista */
@@ -124,15 +120,15 @@
         }
 
         footer {
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #f0f0f0; /* Fondo del footer (igual que en index) */
+            color: #333; /* Color de texto del footer (igual que en index) */
             text-align: center;
             padding: 20px;
             margin-top: 30px;
             font-size: 0.9em;
         }
         footer a {
-            color: #3A5F0B;
+            color: #3A5F0B; /* Color de enlaces en el footer (igual que en index) */
             text-decoration: none;
         }
         footer a:hover {
@@ -142,8 +138,7 @@
 </head>
 <body>
     <header>
-        <h1>Corporación Cultural Antulelbún</h1>
-        <img src="assets/images/LogoP.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
+        <img src="assets/images/Logo_Negro.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
     </header>
 
     <nav>
@@ -152,7 +147,7 @@
         <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
         <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
         <a href="proyectos-futuros.html">Proyectos Futuros</a>
-        <a href="noticias.html">Noticias</a>
+        <a href="noticias.html">Prensa</a>
     </nav>
 
     <main>
