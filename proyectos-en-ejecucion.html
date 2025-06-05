@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Proyectos en Ejecución - Corporación Cultural Antulelbún</title>
+    <title>Proyectos Futuros - Corporación Cultural Antulelbún</title>
     <style>
         /* Estilos Generales Consistentes (tomados de la página index.html) */
         body {
@@ -53,56 +53,70 @@
         nav a:hover {
             background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
         }
-
+        
+        /* Estilos para el contenido principal centrado */
         .main-content-centered {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
-        .main-content-centered h2 { /* Título de sección (Proyectos en Ejecución, etc.) */
-            color: #3A5F0B; /* Color del título (igual que en index para h2 de Noticias) */
+        .main-content-centered > h2 { /* Título principal de la página (Proyectos Futuros) */
+            color: #3A5F0B; 
             text-align: center;
             margin-top: 30px;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
             font-size: 2em;
         }
-
-        /* ESTILOS PARA "PROYECTOS EN EJECUCIÓN" (Adaptados de .noticia en index) */
-        .proyecto { /* Estilo para cada <div class="proyecto"> */
-            background-color: #ffffff; /* Fondo de las "tarjetas" de proyecto */
-            border: 1px solid #e0e0e0; /* Borde de las "tarjetas" */
+        
+        /* Estilos para cada sección de proyecto futuro */
+        .proyecto-futuro {
+            background-color: #ffffff; /* Fondo blanco como otras secciones de contenido */
+            border: 1px solid #e0e0e0;
             border-radius: 8px;
             padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra de las "tarjetas" */
+            margin-bottom: 30px; /* Margen consistente */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .proyecto img.proyecto-imagen {
-            max-width: 100%; /* Las imágenes ocuparán el ancho disponible dentro de su contenedor */
-            height: auto;
-            display: block;
-            margin: 0 auto 20px auto; /* Centrada y con espacio abajo */
-            border-radius: 6px;
-        }
-        .proyecto h3 { /* Título del proyecto */
-            color: #3A5F0B; /* Mismo color que los títulos de sección para coherencia */
-            font-size: 1.5em; 
+        .proyecto-futuro h3 { /* Títulos de cada proyecto */
+            color: #3A5F0B; /* Verde para los títulos de proyecto */
+            text-align: center;
+            font-size: 1.7em;
             margin-top: 0;
-            margin-bottom: 15px;
-            text-align: left;
+            margin-bottom: 20px;
         }
-        .proyecto p {
-            text-align: justify;
-            color: #444; /* Color de texto de los párrafos del proyecto */
+        .proyecto-futuro p {
+            text-align: justify; 
+            color: #444;
             margin-bottom: 15px;
             line-height: 1.7;
         }
-        .proyecto p a { /* Estilo para los enlaces dentro de los párrafos del proyecto */
-            color: #558B2F; /* Un verde que resalte pero sea armónico */
-            text-decoration: underline;
+        .proyecto-futuro p.detalles-proyecto { /* Párrafos de detalles (Estado, Resultados, Ejecución) */
+            text-align: left; /* Alinear a la izquierda para mejor lectura de clave-valor */
+            font-size: 0.95em;
+            margin-bottom: 8px;
         }
-        .proyecto p a:hover {
-            color: #3A5F0B; /* Oscurece al pasar el mouse */
-            text-decoration: none; /* O mantener el subrayado si se prefiere */
+        .proyecto-futuro p.detalles-proyecto strong {
+            color: #222; 
+        }
+        .proyecto-futuro em { /* Estilo para texto en cursiva (postulaciones) */
+            color: #555;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        .proyecto-futuro ol {
+            padding-left: 30px; /* Más indentación para la lista */
+            margin-top: 5px;
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #444;
+        }
+        .proyecto-futuro ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
         }
 
         footer {
@@ -138,43 +152,44 @@
 
     <main>
         <div class="main-content-centered">
-            <section>
-                <h2>Proyectos en Ejecución</h2>
+            <h2>Proyectos Futuros</h2>
 
-                <div class="proyecto">
-                    <h3>Mapeo de Agentes Culturales</h3>
-                    <img src="assets/images/Foto 8.jpg" alt="Mapeo de Agentes Culturales" class="proyecto-imagen">
-                    <p>
-                        Impulsamos un proyecto de mapeo cultural con el propósito de fortalecer la conexión entre artistas, gestores y comunidades locales.
-                        A través de esta iniciativa, buscamos identificar y visibilizar la riqueza artística y cultural de Pucón y Curarrehue, fomentando la colaboración y el acceso equitativo a oportunidades de difusión y desarrollo.
-                    </p>
-                    <p>
-                        <strong>Encuesta:</strong> <a href="https://forms.gle/tfdB4XvcTGo8WMPT9" target="_blank">Participar aquí</a>
-                    </p>
-                </div>
+            <section class="proyecto-futuro">
+                <h3>Proyecto “Reescribiendo la Vida: transformación y acompañamiento a través del arte para adultos mayores y sus cuidadoras”</h3>
+                <p><em>Postulado al Fondo de Iniciativas para la Superación de la Pobreza “Para Vivir Mejor” / Acción Social / 2025. MIDESO.</em></p>
+                <p>Enfrenta los efectos negativos del aislamiento social y la falta de acceso a actividades significativas en adultos mayores y cuidadoras de Pucón y Curarrehue. Esto impacta la salud mental, incrementando depresión, ansiedad y exclusión social.</p>
+                <p>El propósito es promover el bienestar emocional y psicológico de adultos mayores y cuidadores mediante talleres artísticos colectivos, centrados en la creación de "libros alterados". Estas actividades refuerzan la cohesión social e inclusión, con apoyo psicológico para mejorar su bienestar.</p>
+                <p>Los beneficiarios son 80 habitantes de Pucón y Curarrehue (adultos mayores y sus cuidadoras).</p>
+                <p>La estrategia de intervención contempla: planificación y difusión, ejecución de talleres creativos con acompañamiento psicológico, y evaluación de resultados. Las sesiones inician con acompañamiento psicológico mediante dinámicas y ejercicios que introduzcan el trabajo artístico y la colaboración. Luego se enseñarán una serie de técnicas artísticas simples para construir los “Libros Alterados” que reunirán elementos autobiográficos. Cada grupo elaborará además un libro ficticio colectivo.</p>
+                <p class="detalles-proyecto"><strong>Estado:</strong> Postulado.</p>
+                <p class="detalles-proyecto"><strong>Resultados:</strong> Julio - Agosto 2025.</p>
+                <p class="detalles-proyecto"><strong>Ejecución:</strong> Septiembre 2025 a Abril 2026.</p>
+            </section>
 
-                <div class="proyecto">
-                    <h3>Programa Arte en Comunidad</h3>
-                    <img src="assets/images/Foto 9.jpg" alt="Arte en Comunidad" class="proyecto-imagen">
-                    <p>
-                        "Arte en Comunidad" es una iniciativa que promueve el acceso libre y equitativo a la cultura, ofreciendo talleres de arte gratuitos un día al mes para comunidades locales.
-                        Cada sesión se convierte en un punto de encuentro donde el aprendizaje, la creatividad y la expresión artística fortalecen la identidad local.
-                    </p>
-                </div>
+            <section class="proyecto-futuro">
+                <h3>Proyecto “Aula Conexión Cultural Sur: espacio de formación y vinculación para agentes culturales del territorio lacustre andino”</h3>
+                <p><em>Postulado al Fondo de Fortalecimiento (FFOIP) / Fortalecimiento organizaciones de interés público / Regional/ 2025.</em></p>
+                <p>Este proyecto tiene como objetivo diseñar e implementar un aula virtual destinada a ser un espacio educativo y de vinculación para los agentes culturales de las comunas de Pucón y Curarrehue, en la región de La Araucanía. Esta aula virtual estará enfocada en la capacitación, el establecimiento de redes colaborativas y el fortalecimiento de la identidad cultural local, con el propósito de superar las barreras de acceso asociadas a la ubicación geográfica y a limitaciones socioeconómicas.</p>
+                <p>Las comunas de Pucón y Curarrehue, situadas en la zona lacustre andina de La Araucanía, son áreas caracterizadas por su riqueza natural, cultural y su conexión con la cultura ancestral. Sin embargo, enfrentan desafíos estructurales derivados de su ubicación geográfica, con acceso limitado a oportunidades de formación y vinculación profesional, debido a la distancia significativa con la capital regional, Temuco, y otros centros urbanos.</p>
+                <p>Según datos del Observatorio Cultural del Ministerio de las Culturas, las Artes y el Patrimonio, estas comunas cuentan con un total de 129 agentes culturales catastrados: 101 en Pucón y 28 en Curarrehue. Estos agentes desempeñan roles fundamentales en la preservación del patrimonio cultural y en la promoción de la creatividad comunitaria. No obstante, carecen de herramientas adecuadas para su profesionalización y el establecimiento de redes de colaboración.</p>
+                <p class="detalles-proyecto"><strong>Estado:</strong> Postulado.</p>
+                <p class="detalles-proyecto"><strong>Resultados:</strong> Julio - Agosto 2025.</p>
+                <p class="detalles-proyecto"><strong>Ejecución:</strong> Agosto a Noviembre 2025.</p>
+            </section>
 
-                <div class="proyecto">
-                    <h3>Día del Patrimonio 2025: “Un paseo por la memoria de Pucón”</h3>
-                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Día del Patrimonio" class="proyecto-imagen">
-                    <p>
-                        El proyecto busca rescatar y difundir la historia local de Pucón mediante un recorrido turístico teatralizado.
-                        A través de la actuación y el uso de herramientas digitales, se pretende generar una experiencia inmersiva que permita a la comunidad y visitantes conectarse con el pasado del territorio.
-                    </p>
-                    <p>
-                        <strong>Enlace:</strong> <a href="https://www.diadelospatrimonios.cl/actividad/recorrido-patrimonial-teatralizado-un-paseo-por-la-memoria-de-pucon?fbclid=PAZXh0bgNhZW0CMTEAAafMmF85xtbnWxwb-vARv-tZzgV6Bn_SdP9-C_lNEa8X9DNfIEZ2KBygO7agKg_aem_Xv1Ljh4Ubr_bYQjRqubzIw" target="_blank">Ver más</a>
-                        <br>
-                        <strong>Mapa interactivo:</strong> <a href="https://drive.google.com/file/d/1EbRN57yFchJxBSU7dvHOWN4f173Xb6p-/view?usp=drive_link" target="_blank">Descargar mapa</a>
-                    </p>
-                </div>
+            <section class="proyecto-futuro">
+                <h3>Proyecto “Raíces Cooperativas: fortaleciendo la economía creativa lacustre de La Araucanía"</h3>
+                <p><em>Postulado al Fondo Internacional para la Diversidad Cultural de UNESCO.</em></p>
+                <p>Este proyecto tiene el propósito de fortalecer las oportunidades de desarrollo económico y profesional de los agentes culturales de la región de La Araucanía lacustre andina, mediante capacitación especializada y el fortalecimiento de una red de colaboración, impulsando la comercialización en línea como una vía para potenciar el alcance y sostenibilidad de sus iniciativas con identidad territorial. Para el logro de este propósito el proyecto contempla el desarrollo de 4 componentes:</p>
+                <ol>
+                    <li>Generar una instancia de inspiración materializada en un encuentro de experiencias exitosas en comercialización de bienes culturales con identidad territorial e integración de elementos innovadores. Esta instancia será el evento inaugural del proyecto.</li>
+                    <li>Capacitar a agentes culturales emprendedores en la elaboración de un plan de negocio y acompañamiento en la formalización de sus negocios culturales.</li>
+                    <li>Promover la conformación de una cooperativa de agentes culturales del territorio que permita la vinculación permanente y asociatividad para sostener el trabajo conjunto futuro.</li>
+                    <li>Crear una plataforma digital de comercialización mediante el desarrollo de un sitio web interactivo para promocionar y comercializar productos y servicios culturales de los agentes culturales, que sea gestionado por las comunidades organizadas a través de la cooperativa.</li>
+                </ol>
+                <p class="detalles-proyecto"><strong>Estado:</strong> Postulado.</p>
+                <p class="detalles-proyecto"><strong>Resultados:</strong> Febrero 2026.</p>
+                <p class="detalles-proyecto"><strong>Ejecución:</strong> Agosto 2026 a Febrero 2028.</p>
             </section>
         </div>
     </main>
