@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Quiénes Somos - Corporación Cultural Antulelbún</title>
-    <link rel="stylesheet" href="assets/styles.css"> <style>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
         /* Estilos Generales Consistentes (tomados de la página index.html) */
         body {
             font-family: 'Montserrat', sans-serif;
@@ -73,9 +74,13 @@
             margin-bottom: 25px; /* Ajustado a 25px como en index para el h2 de noticias */
             font-weight: bold; /* Añadido para que sea consistente */
         }
-        .main-content-centered h2 { font-size: 2em; }
-        .main-content-centered h3 { font-size: 1.7em; }
-        .main-content-centered h4 { font-size: 1.4em; margin-bottom: 10px;}
+        /* Unificar el tamaño de todos los títulos de sección (h2, h3, h4) */
+        .main-content-centered h2,
+        .main-content-centered h3,
+        .main-content-centered h4 {
+            font-size: 2em; /* Tamaño uniforme para todos los títulos principales de sección */
+            margin-bottom: 30px; /* Aumentar la separación entre títulos y párrafos */
+        }
 
         /* Estilo para secciones de contenido (adaptado de .noticia en index) */
         .content-section {
@@ -89,16 +94,20 @@
         .content-section p {
             text-align: justify; 
             color: #444; /* Color de texto de los párrafos */
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* Aumentar la separación entre párrafos */
             line-height: 1.7;
+            font-size: 1.1em; /* Unificar tamaño de letra para párrafos */
+        }
+        .content-section ul {
+            margin-bottom: 20px; /* Aumentar la separación para listas */
         }
 
         /* Párrafo introductorio de "Quiénes Somos" */
         .intro-paragraph {
             text-align: center; /* Centrado como en la sección de bienvenida de index */
             color: #444;
-            margin-bottom: 10px; /* Ajustado a 10px como en la sección de bienvenida de index */
-            font-size: 1.1em; /* Ajustado a 1.1em como en la sección de bienvenida de index */
+            margin-bottom: 20px; /* Aumentar la separación */
+            font-size: 1.1em; /* Ajustado para que sea igual que en index */
             padding: 0; /* Asegurar que no haya padding extra */
         }
         .intro-paragraph strong {
@@ -114,7 +123,7 @@
             max-width: 100%;  
             height: auto;   
             display: block;   
-            margin: 0 auto 20px auto; /* Centrada y con espacio abajo como en .noticia de index */
+            margin: 0 auto 30px auto; /* Centrada y con más espacio abajo */
             border-radius: 6px;
         }
         
@@ -122,29 +131,29 @@
         .asamblea-title {
             text-align: center;
             color: #000000; /* Cambiado a negro para consistencia con otros títulos */
-            font-size: 1.5em; /* Ajustado para que sea consistente con los h3 de noticia */
+            font-size: 1.7em; /* Ajustado para que sea consistente con otros subtítulos */
             margin-top: 0; /* Eliminado margen superior */
-            margin-bottom: 15px; /* Ajustado a 15px como en .noticia h3 */
+            margin-bottom: 25px; /* Aumentar la separación */
             font-weight: bold;
         }
         .asamblea-members {
             list-style: none;   
-            padding-left: 0;   
+            padding-left: 0;    
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* Aumentar la separación */
         }
         .asamblea-members li {
-            margin-bottom: 12px;
-            font-size: 1.1em;     
+            margin-bottom: 15px; /* Aumentar la separación entre elementos de la lista */
+            font-size: 1.1em;       
             color: #333;        
             text-align: center;
-            line-height: 1.5;     
+            line-height: 1.5;       
         }
         .asamblea-members li strong {
             color: #222;            
-            display: block;          
-            margin-bottom: 3px;     
-            font-weight: 600;        
+            display: block;             
+            margin-bottom: 5px;       
+            font-weight: 600;           
         }
         .asamblea-members li span.member-name {
             display: block;
@@ -153,8 +162,8 @@
 
         /* Para el equipo de trabajo */
         .team-member {
-            text-align: center;   
-            margin-bottom: 40px;
+            text-align: center;    
+            margin-bottom: 50px; /* Aumentar la separación entre cada miembro del equipo */
         }
 
         /* Contenedor para la imagen del miembro del equipo para forzar un aspecto cuadrado y luego redondear */
@@ -163,7 +172,7 @@
             height: 180px; /* Tamaño fijo para el contenedor */
             border-radius: 50%; /* Redondeado el contenedor */
             overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
-            margin: 0 auto 15px auto; /* Centrado y con margen inferior */
+            margin: 0 auto 20px auto; /* Centrado y con margen inferior */
             display: flex; /* Para centrar la imagen dentro del contenedor */
             justify-content: center; /* Para centrar la imagen horizontalmente */
             align-items: center; /* Para centrar la imagen verticalmente */
@@ -178,20 +187,21 @@
         }
 
         .team-member p {
-            text-align: justify;   
-            font-size: 0.95em;
+            text-align: justify;    
+            font-size: 1.1em; /* Unificar tamaño de letra para párrafos */
             color: #444;
+            margin-bottom: 20px; /* Aumentar la separación entre párrafos */
         }
         .team-member p strong {
             display: block;
-            font-size: 1.2em;
+            font-size: 1.3em; /* Ajustar tamaño para nombres de persona */
             color: #333;
-            margin-bottom: 8px;
+            margin-bottom: 10px; /* Aumentar la separación */
             text-align: center;
         }
         .team-member h4 {
-            margin-bottom: 15px;
-            font-size: 1.3em;
+            margin-bottom: 25px; /* Aumentar la separación para los títulos de puesto */
+            font-size: 1.8em; /* Unificar tamaño de título de puesto con otros h3/h4 */
         }
         
         /* Estilos para el footer */
@@ -225,19 +235,20 @@
             color: #000000;
             text-align: center;
             margin-top: 0; /* Ajustado para que no haya margen superior en el primer h3 dentro del contenedor */
-            margin-bottom: 20px; /* Espacio entre el título y el párrafo */
-            font-size: 1.7em;
+            margin-bottom: 25px; /* Espacio entre el título y el párrafo */
+            font-size: 2em; /* Unificar tamaño de título */
             font-weight: bold;
         }
         .mission-vision-container p {
             text-align: justify;
             color: #444;
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* Aumentar la separación entre párrafos */
             line-height: 1.7;
+            font-size: 1.1em; /* Unificar tamaño de letra para párrafos */
         }
         /* Ajuste de margen para el segundo h3 dentro del contenedor */
         .mission-vision-container h3 + p + h3 {
-            margin-top: 30px; /* Margen superior para el segundo h3 */
+            margin-top: 40px; /* Aumentar margen superior para el segundo h3 */
         }
 
         /* Estilos para publicaciones de Carlos Gray Aguirre */
@@ -245,13 +256,13 @@
             list-style: none; /* Eliminar viñetas por defecto */
             padding-left: 0;
             text-align: left; /* Alineado a la izquierda para las publicaciones */
-            margin-top: 15px;
-            margin-bottom: 25px;
+            margin-top: 20px; /* Aumentar la separación */
+            margin-bottom: 30px; /* Aumentar la separación */
         }
         .publications-list li {
-            margin-bottom: 8px;
+            margin-bottom: 10px; /* Aumentar la separación entre elementos de la lista */
             color: #444;
-            font-size: 1em;
+            font-size: 1.1em; /* Unificar tamaño de letra para elementos de lista */
             display: flex;
             align-items: flex-start;
         }
@@ -312,7 +323,7 @@
                     <div class="img-container">
                         <img src="assets/images/Foto 5.jpg" alt="Foto de Carlos Gray Aguirre">
                     </div>
-                    <p><strong>Carlos Gray Aguirre</strong>
+                    <p><strong>Carlos Gray Aguirre</strong><br>
                     Actor, Escritor y Gestor Cultural con más de 30 años de trayectoria en el territorio lacustre andino, director de “La Góndola del Arte”, compañía de teatro. Entre otros, recibió el “Premio a la Trayectoria Cultural de la Araucanía” por parte de la SEREMI de las Culturas, las Artes y el Patrimonio en 2022.</p>
                     <p><strong>Publicaciones</strong></p>
                     <ul class="publications-list">
@@ -329,7 +340,7 @@
                     <div class="img-container">
                         <img src="assets/images/Foto 6.jpg" alt="Foto de Natalia Navarrete Cavieres">
                     </div>
-                    <p><strong>Natalia Navarrete Cavieres</strong>
+                    <p><strong>Natalia Navarrete Cavieres</strong><br>
                     Administradora Pública, Magíster en Gestión Educacional, Diplomada en Gestión de Proyectos Municipales y Diplomada en Gobiernos Locales Transformadores.<br>
                     Diseñadora y Coordinadora General de uno de los 11 proyectos del mundo ganadores del Fondo Internacional para la Diversidad Cultural de UNESCO, versión 2022. Formuladora y coordinadora de diversos proyectos de asociatividad municipal en vinculación con las comunidades.</p>
                 </div>
@@ -339,16 +350,16 @@
                     <div class="img-container">
                         <img src="assets/images/Foto 7.jpg" alt="Foto de Daniela Navarrete Cavieres">
                     </div>
-                    <p><strong>Daniela Navarrete Cavieres</strong>
+                    <p><strong>Daniela Navarrete Cavieres</strong><br>
                     Fotógrafa Profesional, Gestora Cultural, Guía Educativa y Tallerista de Técnica de Cianotipia. Creadora y colaboradora de múltiples proyectos culturales comunitarios autofinanciados.</p>
                 </div>
 
                 <div class="team-member">
                     <h4>Colaborador</h4>
                     <div class="img-container">
-                        <img src="assets/images/Armando Zapata.jpeg" alt="Foto de Armando Zapata Silva">
+                        <img src="assets/images/Foto Armando Zapata.jpeg" alt="Foto de Armando Zapata Silva">
                     </div>
-                    <p><strong>Armando Zapata Silva</strong>
+                    <p><strong>Armando Zapata Silva</strong><br>
                     Colaborador con larga trayectoria en radio y televisión, apoya aspectos técnicos de las actividades de la Corporación y forma parte de su Directorio. Artista visual (pintura en diversas técnicas) y gestor cultural.</p>
                 </div>
 
