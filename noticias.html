@@ -45,10 +45,11 @@
             color: black; /* Color del texto de los enlaces de navegación (igual que en index) */
             text-decoration: none;
             padding: 8px 12px;
-            font-size: 0.95em;
+            font-size: 1.1em; /* Consistente con otras páginas */
             margin: 5px 5px;
             border-radius: 4px;
             transition: background-color 0.3s;
+            font-weight: bold; /* Consistente con otras páginas */
         }
         nav a:hover {
             background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
@@ -60,11 +61,20 @@
             padding: 20px;
         }
         .main-content-centered h2 { /* Título de Noticias */
-            color: #3A5F0B; /* Color del título (igual que en index para h2 de Noticias) */
+            color: #000000; /* Cambiado a negro para consistencia */
             text-align: center;
             margin-top: 30px;
             margin-bottom: 25px;
             font-size: 2em;
+            font-weight: bold; /* Añadido para consistencia */
+        }
+
+        /* Estilo para el párrafo introductorio de prensa */
+        .introduccion-prensa {
+            text-align: justify;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            color: #555;
         }
 
         /* Estilo para cada noticia */
@@ -80,15 +90,16 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto 20px auto; 
+            margin: 0 auto 20px auto;
             border-radius: 6px;
         }
         .noticia h3 { /* Título de la noticia */
-            color: #333;
-            text-align: left; 
+            color: #000000; /* Cambiado a negro para consistencia */
+            text-align: left;
             margin-top: 0;
             margin-bottom: 15px;
             font-size: 1.5em;
+            font-weight: bold; /* Añadido para consistencia */
         }
         .noticia p {
             text-align: justify;
@@ -96,14 +107,37 @@
             margin-bottom: 15px;
             line-height: 1.7;
         }
+        .noticia ul { /* Estilo para la lista de enlaces de prensa */
+            list-style: none; /* Eliminar viñetas */
+            padding: 0;
+            margin-top: 20px;
+        }
+        .noticia ul li {
+            margin-bottom: 10px;
+        }
+        .noticia ul li strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .noticia ul li a {
+            color: #3A5F0B; /* Color de enlace consistente */
+            text-decoration: none;
+            word-wrap: break-word; /* Para URLs largas */
+        }
+        .noticia ul li a:hover {
+            text-decoration: underline;
+        }
+
 
         /* Para el enlace del formulario en Noticia 2 */
         .formulario-link-container {
-            text-align: center; 
+            text-align: center;
             margin-top: 20px;
         }
         .formulario-link-container img.formulario-imagen {
-            max-width: 100%; 
+            max-width: 100%;
             height: auto;
             border: 1px solid #ccc;
             border-radius: 6px;
@@ -124,16 +158,17 @@
         }
 
         footer {
-            background-color: #f0f0f0; /* Fondo del footer (igual que en index) */
-            color: #333; /* Color de texto del footer (igual que en index) */
+            background-color: #e8f8c1; /* Fondo del footer (igual que en index y quienes-somos) */
+            color: #333; /* Color de texto del footer (igual que en index y quienes-somos) */
             text-align: center;
             padding: 20px;
             margin-top: 30px;
-            font-size: 0.9em;
+            font-size: 1.1em; /* Consistente con otras páginas */
         }
         footer a {
-            color: #3A5F0B; /* Color de enlaces en el footer (igual que en index) */
+            color: black; /* Cambiado a negro para ser consistente */
             text-decoration: none;
+            font-weight: bold; /* Consistente con otras páginas */
         }
         footer a:hover {
             text-decoration: underline;
@@ -156,15 +191,48 @@
 
     <main>
         <div class="main-content-centered">
-            <section id="noticias">
+            <section id="prensa">
                 <h2>Prensa</h2>
+                <p class="introduccion-prensa">Notas de prensa sobre el recorrido patrimonial teatralizado “Un paseo por la memoria de Pucón”, realizado por la Corporación Antulelbún, Universidad de La Frontera y Municipalidad de Pucón en el Día de Los Patrimonios 2025.</p>
+
                 <div class="noticia">
-                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 500px;"> 
+                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 500px;">
                     <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
                     <p>En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".</p>
                     <p>El evento, previsto para domingo 25 de mayo a las 11:00 horas, ofrecerá un recorrido guiado por nueve puntos emblemáticos de la ciudad, con actuaciones que darán vida a simpáticos personajes de inicios de la fundación de la comuna para relatar pasajes contenidos en Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.</p>
                     <p>Esta iniciativa no solo busca acercar la comunidad y visitantes al pasado de Pucón, sino que también promueve el acceso gratuito al conocimiento histórico y la participación activa en la conservación de la identidad cultural. Para ello, el evento contará con herramientas digitales como un código QR que permitirá acceder a un mapa interactivo con fotografías antiguas de los lugares visitados.</p>
                     <p>El equipo de producción está conformado por tres actores y una profesional encargada del material digital, quienes, con vestuarios teatrales y elementos auditivos como megáfonos, transformarán cada parada en un episodio inmersivo de la historia local. Se espera que esta celebración del patrimonio logre consolidarse como un hito cultural que refuerce el vínculo entre la ciudad y su historia, permitiendo a los asistentes vivir el pasado a través de una experiencia innovadora y memorable. ¡Pucón se prepara para recorrer su memoria como nunca antes!</p>
+                </div>
+
+                <div class="noticia">
+                    <h3>Enlaces a noticias sobre el recorrido patrimonial teatralizado:</h3>
+                    <ul>
+                        <li>
+                            <strong>1. La Voz de Pucón</strong>
+                            <a href="https://www.lavozdepucon.cl/2025/05/26/recorrido-turistico-teatralizado-marca-dia-de-los-patrimonios-un-paseo-por-la-memoria-de-pucon/" target="_blank">https://www.lavozdepucon.cl/2025/05/26/recorrido-turistico-teatralizado-marca-dia-de-los-patrimonios-un-paseo-por-la-memoria-de-pucon/</a>
+                        </li>
+                        <li>
+                            <strong>2. Municipalidad de Pucón</strong>
+                            <a href="https://municipalidadpucon.cl/?p=55178" target="_blank">https://municipalidadpucon.cl/?p=55178</a>
+                        </li>
+                        <li>
+                            <strong>3. Pucón TV</strong>
+                            <a href="https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio" target="_blank">https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio</a>
+                            <a href="https://www.youtube.com/watch?v=ym5WP6OlaZY" target="_blank">https://www.youtube.com/watch?v=ym5WP6OlaZY</a>
+                        </li>
+                        <li>
+                            <strong>4. El Diario de la Araucanía</strong>
+                            <a href="https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/" target="_blank">https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/</a>
+                        </li>
+                        <li>
+                            <strong>5. Prensa Ciudadana</strong>
+                            <a href="https://www.prensaudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/" target="_blank">https://www.prensaudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/</a>
+                        </li>
+                        <li>
+                            <strong>6. Noticias del Lago</strong>
+                            <a href="https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595" target="_blank">https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595</a>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="noticia">
@@ -184,8 +252,8 @@
 
     <footer>
         <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com">corporacionantulelbun@gmail.com</a></p>
-        <p>Síguenos: 
-            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> | 
+        <p>Síguenos:
+            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> |
             <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank">Facebook</a>
         </p>
     </footer>
