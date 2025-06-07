@@ -151,11 +151,12 @@
             border-radius: 6px;
         }
         .noticia h3 { /* Título de la noticia (Noticia 1, Noticia 2) */
-            color: #333;
+            color: #000000; /* Cambiado a negro para consistencia */
             text-align: left; /* Alineado a la izquierda para el título de la noticia */
             margin-top: 0;
             margin-bottom: 15px;
             font-size: 1.5em;
+            font-weight: bold; /* Añadido para consistencia */
         }
         .noticia p {
             text-align: justify;
@@ -163,6 +164,51 @@
             margin-bottom: 15px;
             line-height: 1.7;
         }
+        /* Estilo para la lista de enlaces de prensa */
+        .noticia ul {
+            list-style: none; /* Eliminar viñetas */
+            padding: 0;
+            margin-top: 20px;
+        }
+        .noticia ul li {
+            margin-bottom: 10px;
+        }
+        .noticia ul li strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .noticia ul li a {
+            color: #3A5F0B; /* Color de enlace consistente */
+            text-decoration: none;
+            word-wrap: break-word; /* Para URLs largas */
+        }
+        .noticia ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para el video incrustado de YouTube */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px; /* Espacio antes del video */
+            margin-bottom: 20px; /* Espacio después del video */
+            border-radius: 6px; /* Para que coincida con el border-radius de las imágenes */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra para que se vea como las noticias */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
 
         /* Para el enlace del formulario en Noticia 2 */
         .formulario-link-container {
@@ -242,8 +288,43 @@
                 <p>Somos una ONG sin fines de lucro fundada en 2023 por la poeta Norka Sepúlveda, dedicada al fomento y desarrollo de la cultura y las artes.</p>
             </section>
 
-            <section id="noticias">
+            <section id="prensa">
                 <h2>Prensa</h2>
+                <div class="noticia">
+                    <h3>Enlaces a noticias sobre el recorrido patrimonial teatralizado:</h3>
+                    <ul>
+                        <li>
+                            <strong>1. La Voz de Pucón</strong>
+                            <a href="https://www.lavozdepucon.cl/2025/05/26/recorrido-turistico-teatralizado-marca-dia-de-los-patrimonios-un-paseo-por-la-memoria-de-pucon/" target="_blank">https://www.lavozdepucon.cl/2025/05/26/recorrido-turistico-teatralizado-marca-dia-de-los-patrimonios-un-paseo-por-la-memoria-de-pucon/</a>
+                        </li>
+                        <li>
+                            <strong>2. Municipalidad de Pucón</strong>
+                            <a href="https://municipalidadpucon.cl/?p=55178" target="_blank">https://municipalidadpucon.cl/?p=55178</a>
+                        </li>
+                        <li>
+                            <strong>3. Pucón TV</strong>
+                            <a href="https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio" target="_blank">https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio</a>
+                            </li>
+                    </ul>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ym5wP6OlaZY?si=ZYmH0y7vLa6rOqw8" title="Pucón TV Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <ul>
+                        <li>
+                            <strong>4. El Diario de la Araucanía</strong>
+                            <a href="https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/" target="_blank">https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/</a>
+                        </li>
+                        <li>
+                            <strong>5. Prensa Ciudadana</strong>
+                            <a href="https://www.prensaciudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/" target="_blank">https://www.prensaciudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/</a>
+                        </li>
+                        <li>
+                            <strong>6. Noticias del Lago</strong>
+                            <a href="https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595" target="_blank">https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595</a>
+                        </li>
+                    </ul>
+                </div>
+
                 <div class="noticia">
                     <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 850px;">
                     <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
