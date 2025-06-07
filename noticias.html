@@ -130,31 +130,55 @@
             text-decoration: underline;
         }
 
+        /* Estilos para el video incrustado de YouTube */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px; /* Espacio antes del video */
+            margin-bottom: 20px; /* Espacio después del video */
+            border-radius: 6px; /* Para que coincida con el border-radius de las imágenes */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra para que se vea como las noticias */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
 
         /* Para el enlace del formulario en Noticia 2 */
         .formulario-link-container {
-            text-align: center;
+            text-align: left; /* Alinea el contenido a la izquierda */
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            align-items: center; /* Alinea verticalmente los items en el medio */
+            gap: 10px; /* Espacio entre el texto y el botón */
         }
-        .formulario-link-container img.formulario-imagen {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            margin-bottom: 10px;
+        .formulario-link-container p {
+            margin: 0;
+            font-size: 1em; /* Ajusta este valor si necesitas que sea más grande o pequeño para que coincida con el p general de .noticia */
+            color: #444; /* Asegura que el color de texto sea consistente */
         }
         .formulario-link-container a.boton-formulario {
             display: inline-block;
-            background-color: #558B2F; /* Color de botón (igual que en index) */
-            color: white;
+            background-color: #eee5bf; /* Color de botón (igual que en index) */
+            color: black; /* Texto del botón negro (igual que en index) */
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
+            font-size: 1em; /* Ajusta este valor para que coincida con el texto del párrafo si es necesario */
         }
         .formulario-link-container a.boton-formulario:hover {
-            background-color: #3A5F0B; /* Color de hover de botón (igual que en index) */
+            background-color: #d0e8a1; /* Color de hover de botón (igual que en index) */
         }
 
         footer {
@@ -193,15 +217,9 @@
         <div class="main-content-centered">
             <section id="prensa">
                 <h2>Prensa</h2>
-                <p class="introduccion-prensa">Notas de prensa sobre el recorrido patrimonial teatralizado “Un paseo por la memoria de Pucón”, realizado por la Corporación Antulelbún, Universidad de La Frontera y Municipalidad de Pucón en el Día de Los Patrimonios 2025.</p>
-
+                
                 <div class="noticia">
-                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 500px;">
-                    <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
-                    <p>En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".</p>
-                    <p>El evento, previsto para domingo 25 de mayo a las 11:00 horas, ofrecerá un recorrido guiado por nueve puntos emblemáticos de la ciudad, con actuaciones que darán vida a simpáticos personajes de inicios de la fundación de la comuna para relatar pasajes contenidos en Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.</p>
-                    <p>Esta iniciativa no solo busca acercar la comunidad y visitantes al pasado de Pucón, sino que también promueve el acceso gratuito al conocimiento histórico y la participación activa en la conservación de la identidad cultural. Para ello, el evento contará con herramientas digitales como un código QR que permitirá acceder a un mapa interactivo con fotografías antiguas de los lugares visitados.</p>
-                    <p>El equipo de producción está conformado por tres actores y una profesional encargada del material digital, quienes, con vestuarios teatrales y elementos auditivos como megáfonos, transformarán cada parada en un episodio inmersivo de la historia local. Se espera que esta celebración del patrimonio logre consolidarse como un hito cultural que refuerce el vínculo entre la ciudad y su historia, permitiendo a los asistentes vivir el pasado a través de una experiencia innovadora y memorable. ¡Pucón se prepara para recorrer su memoria como nunca antes!</p>
+                    <p class="introduccion-prensa">Notas de prensa sobre el recorrido patrimonial teatralizado “Un paseo por la memoria de Pucón”, realizado por la Corporación Antulelbún, Universidad de La Frontera y Municipalidad de Pucón en el Día de Los Patrimonios 2025.</p>
                 </div>
 
                 <div class="noticia">
@@ -218,21 +236,34 @@
                         <li>
                             <strong>3. Pucón TV</strong>
                             <a href="https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio" target="_blank">https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio</a>
-                            <a href="https://www.youtube.com/watch?v=ym5WP6OlaZY" target="_blank">https://www.youtube.com/watch?v=ym5WP6OlaZY</a>
-                        </li>
+                            </li>
+                    </ul>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Pucón TV Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <ul>
                         <li>
                             <strong>4. El Diario de la Araucanía</strong>
                             <a href="https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/" target="_blank">https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/</a>
                         </li>
                         <li>
                             <strong>5. Prensa Ciudadana</strong>
-                            <a href="https://www.prensaudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/" target="_blank">https://www.prensaudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/</a>
+                            <a href="https://www.prensaciudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/" target="_blank">https://www.prensaudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/</a>
                         </li>
                         <li>
                             <strong>6. Noticias del Lago</strong>
                             <a href="https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595" target="_blank">https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595</a>
                         </li>
                     </ul>
+                </div>
+
+                <div class="noticia">
+                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 850px;">
+                    <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
+                    <p>En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".</p>
+                    <p>El evento, previsto para domingo 25 de mayo a las 11:00 horas, ofrecerá un recorrido guiado por nueve puntos emblemáticos de la ciudad, con actuaciones que darán vida a simpáticos personajes de inicios de la fundación de la comuna para relatar pasajes contenidos en Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.</p>
+                    <p>Esta iniciativa no solo busca acercar la comunidad y visitantes al pasado de Pucón, sino que también promueve el acceso gratuito al conocimiento histórico y la participación activa en la conservación de la identidad cultural. Para ello, el evento contará con herramientas digitales como un código QR que permitirá acceder a un mapa interactivo con fotografías antiguas de los lugares visitados.</p>
+                    <p>El equipo de producción está conformado por tres actores y una profesional encargada del material digital, quienes, con vestuarios teatrales y elementos auditivos como megáfonos, transformarán cada parada en un episodio inmersivo de la historia local. Se espera que esta celebración del patrimonio logre consolidarse como un hito cultural que refuerce el vínculo entre la ciudad y su historia, permitiendo a los asistentes vivir el pasado a través de una experiencia innovadora y memorable. ¡Pucón se prepara para recorrer su memoria como nunca antes!</p>
                 </div>
 
                 <div class="noticia">
