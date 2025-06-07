@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Quiénes Somos - Corporación Cultural Antulelbún</title>
-    <style>
+    <link rel="stylesheet" href="assets/styles.css"> <style>
         /* Estilos Generales Consistentes (tomados de la página index.html) */
         body {
             font-family: 'Montserrat', sans-serif;
@@ -45,10 +45,11 @@
             color: black; /* Color del texto de los enlaces de navegación (igual que en index) */
             text-decoration: none;
             padding: 8px 12px;
-            font-size: 0.95em;
+            font-size: 1.1em; /* Ajustado para que sea igual que en index */
             margin: 5px 5px;
             border-radius: 4px;
             transition: background-color 0.3s;
+            font-weight: bold; /* Añadido para que sea igual que en index */
         }
         nav a:hover {
             background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
@@ -66,10 +67,11 @@
         .main-content-centered h2,
         .main-content-centered h3,
         .main-content-centered h4 {
-            color: #3A5F0B; /* Color verde para los títulos (igual que en index para h2 de Noticias) */
+            color: #000000; /* Cambiado a negro como en index para el h2 de noticias */
             text-align: center;
             margin-top: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 25px; /* Ajustado a 25px como en index para el h2 de noticias */
+            font-weight: bold; /* Añadido para que sea consistente */
         }
         .main-content-centered h2 { font-size: 2em; }
         .main-content-centered h3 { font-size: 1.7em; }
@@ -90,19 +92,21 @@
             margin-bottom: 15px;
             line-height: 1.7;
         }
-        /* Párrafo introductorio de "Quiénes Somos" y el que precede a la lista */
+
+        /* Párrafo introductorio de "Quiénes Somos" */
         .intro-paragraph {
-            text-align: justify;
+            text-align: center; /* Centrado como en la sección de bienvenida de index */
             color: #444;
-            margin-bottom: 15px;
-            line-height: 1.7;
+            margin-bottom: 10px; /* Ajustado a 10px como en la sección de bienvenida de index */
+            font-size: 1.1em; /* Ajustado a 1.1em como en la sección de bienvenida de index */
+            padding: 0; /* Asegurar que no haya padding extra */
         }
         .intro-paragraph strong {
             display: block;
             text-align: center;
-            font-size: 1.2em;
-            color: #3A5F0B; /* Color verde para el texto resaltado */
-            margin-bottom: 15px;
+            font-size: 1.6em; /* Ajustado a 1.6em como en la sección de bienvenida de index */
+            color: black; /* Cambiado a negro como en la sección de bienvenida de index */
+            margin-bottom: 0; /* Eliminar margen inferior si no es necesario */
         }
 
         /* Estilos para imágenes generales dentro de .content-section */
@@ -110,37 +114,37 @@
             max-width: 100%;  
             height: auto;   
             display: block;   
-            margin: 20px auto;  
+            margin: 0 auto 20px auto; /* Centrada y con espacio abajo como en .noticia de index */
             border-radius: 6px;
         }
         
         /* Para la lista de miembros de la Asamblea */
         .asamblea-title {
             text-align: center;
-            color: #3A5F0B; /* Color del título de la asamblea */
-            font-size: 1.3em;
-            margin-top: 20px;
-            margin-bottom: 15px;
+            color: #000000; /* Cambiado a negro para consistencia con otros títulos */
+            font-size: 1.5em; /* Ajustado para que sea consistente con los h3 de noticia */
+            margin-top: 0; /* Eliminado margen superior */
+            margin-bottom: 15px; /* Ajustado a 15px como en .noticia h3 */
             font-weight: bold;
         }
         .asamblea-members {
-            list-style: none;  
-            padding-left: 0;  
+            list-style: none;   
+            padding-left: 0;   
             text-align: center;
             margin-bottom: 20px;
         }
         .asamblea-members li {
             margin-bottom: 12px;
-            font-size: 1.1em;    
+            font-size: 1.1em;     
             color: #333;        
             text-align: center;
-            line-height: 1.5;    
+            line-height: 1.5;     
         }
         .asamblea-members li strong {
-            color: #222;          
-            display: block;         
+            color: #222;            
+            display: block;          
             margin-bottom: 3px;     
-            font-weight: 600;       
+            font-weight: 600;        
         }
         .asamblea-members li span.member-name {
             display: block;
@@ -149,18 +153,32 @@
 
         /* Para el equipo de trabajo */
         .team-member {
-            text-align: center;  
+            text-align: center;   
             margin-bottom: 40px;
         }
-        .team-member img {
-            max-width: 180px;
-            border-radius: 50%;  
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 15px;
+
+        /* Contenedor para la imagen del miembro del equipo para forzar un aspecto cuadrado y luego redondear */
+        .team-member .img-container {
+            width: 180px; /* Tamaño fijo para el contenedor */
+            height: 180px; /* Tamaño fijo para el contenedor */
+            border-radius: 50%; /* Redondeado el contenedor */
+            overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+            margin: 0 auto 15px auto; /* Centrado y con margen inferior */
+            display: flex; /* Para centrar la imagen dentro del contenedor */
+            justify-content: center; /* Para centrar la imagen horizontalmente */
+            align-items: center; /* Para centrar la imagen verticalmente */
         }
+
+        .team-member .img-container img {
+            width: 100%; /* La imagen llenará el ancho del contenedor */
+            height: 100%; /* La imagen llenará la altura del contenedor */
+            object-fit: cover; /* Recorta la imagen para que llene el contenedor sin distorsionar */
+            border-radius: 0; /* Asegurarse de que la imagen misma no tenga border-radius extra */
+            margin: 0; /* Eliminar márgenes internos de la imagen */
+        }
+
         .team-member p {
-            text-align: justify;  
+            text-align: justify;   
             font-size: 0.95em;
             color: #444;
         }
@@ -175,22 +193,76 @@
             margin-bottom: 15px;
             font-size: 1.3em;
         }
-
+        
+        /* Estilos para el footer */
         footer {
-            background-color: #f0f0f0; /* Fondo del footer (igual que en index) */
+            background-color: #e8f8c1; /* Fondo del footer (igual que en index) */
             color: #333; /* Color de texto del footer (igual que en index) */
             text-align: center;
             padding: 20px;
             margin-top: 30px;
-            font-size: 0.9em;
+            font-size: 1.1em; /* Aumentado para que sea igual que en index */
         }
         footer a {
-            color: #3A5F0B; /* Color de enlaces en el footer (igual que en index) */
+            color: black; /* Cambiado a negro para que sea igual que en index */
             text-decoration: none;
+            font-weight: bold; /* Añadido para que sea igual que en index */
         }
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Estilo para unificar Misión y Visión en un solo cuadro */
+        .mission-vision-container {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .mission-vision-container h3 {
+            color: #000000;
+            text-align: center;
+            margin-top: 0; /* Ajustado para que no haya margen superior en el primer h3 dentro del contenedor */
+            margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+            font-size: 1.7em;
+            font-weight: bold;
+        }
+        .mission-vision-container p {
+            text-align: justify;
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        /* Ajuste de margen para el segundo h3 dentro del contenedor */
+        .mission-vision-container h3 + p + h3 {
+            margin-top: 30px; /* Margen superior para el segundo h3 */
+        }
+
+        /* Estilos para publicaciones de Carlos Gray Aguirre */
+        .publications-list {
+            list-style: none; /* Eliminar viñetas por defecto */
+            padding-left: 0;
+            text-align: left; /* Alineado a la izquierda para las publicaciones */
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        .publications-list li {
+            margin-bottom: 8px;
+            color: #444;
+            font-size: 1em;
+            display: flex;
+            align-items: flex-start;
+        }
+        .publications-list li::before {
+            content: '☐'; /* Cuadrado vacío */
+            margin-right: 8px;
+            color: #333; /* Color del cuadrado */
+            font-size: 1.2em; /* Tamaño del cuadrado */
+            line-height: 1; /* Asegurar que el cuadrado se alinee bien */
+        }
+
     </style>
 </head>
 <body>
@@ -212,40 +284,51 @@
             <h2>Quiénes Somos</h2>
 
             <section class="content-section">
-                <p class="intro-paragraph">Somos una ONG o corporación cultural sin fines de lucro, fundada en 2023 por la poeta Norka Sepúlveda para el desarrollo de la cultura y las artes. El órgano colectivo principal de la Corporación es su Asamblea General de Socios.</p>
+                <p class="intro-paragraph">Somos una ONG o corporación cultural sin fines de lucro, fundada en 2023 por la poeta Norka Sepúlveda, <span style="font-weight: bold;">profesora normalista y poeta</span>. El órgano colectivo principal de la Corporación es su Asamblea General de Socios.</p>
                 
                 <p class="asamblea-title">Nuestra Asamblea General está conformada por:</p>
                 <ul class="asamblea-members">
                     <li><strong>Presidente Directorio y Representante Legal:</strong> <span class="member-name">Carlos Gray Aguirre</span></li>
-                    <li><strong>Tesorero Directorio:</strong> <span class="member-name">Armando Zapata Silva</span></li>
                     <li><strong>Secretaria Directorio:</strong> <span class="member-name">Graciela Guajardo Hernández</span></li>
-                    <li><span class="member-name">Maria Cristina Hurtado Guzmán</span></li> <li><span class="member-name">Tomás Alejandro Billike Brancoli</span></li> 
+                    <li><strong>Tesorero Directorio:</strong> <span class="member-name">Armando Zapata Silva</span></li>
+                    <li><strong>Directora:</strong> <span class="member-name">María Cristina Hurtado Guzmán</span></li>
+                    <li><strong>Director:</strong> <span class="member-name">Tomás Alejandro Billike Brancoli</span></li> 
                 </ul>
                 <img src="assets/images/Foto 4_organigrama Antulelbun.jpg" alt="Organigrama de la Corporación Cultural Antulelbún" style="max-width: 700px;">
             </section>
 
-            <section class="content-section">
-                <h3>Visión</h3>
-                <p>La Corporación Cultural Antulelbún proyecta su desarrollo desde el territorio lacustre andino, preservando su riqueza cultural y fortaleciendo la identidad local. A través de innovación, creatividad y redes de colaboración, impulsa un ecosistema artístico sostenible que conecta expresiones locales con espacios nacionales e internacionales, consolidándose como un referente de acceso y equidad en la producción cultural.</p>
-            </section>
-
-            <section class="content-section">
+            <section class="mission-vision-container">
                 <h3>Misión</h3>
                 <p>La Corporación Cultural Antulelbún impulsa el desarrollo cultural y artístico en Pucón, promoviendo inclusión, sostenibilidad e innovación. A través de formación, difusión y colaboración, fortalece la identidad local, conecta comunidades y potencia la producción creativa, consolidándose como un motor del ecosistema cultural y social.</p>
+                
+                <h3>Visión</h3>
+                <p>La Corporación Cultural Antulelbún proyecta su desarrollo desde el territorio lacustre andino, preservando su riqueza cultural y fortaleciendo la identidad local. A través de innovación, creatividad y redes de colaboración, impulsa un ecosistema artístico sostenible que conecta expresiones locales con espacios nacionales e internacionales, consolidándose como un referente de acceso y equidad en la producción cultural.</p>
             </section>
 
             <section class="content-section">
                 <h3>Equipo de Trabajo</h3>
                 <div class="team-member">
                     <h4>Director</h4>
-                    <img src="assets/images/Foto 5.jpg" alt="Foto de Carlos Gray Aguirre">
+                    <div class="img-container">
+                        <img src="assets/images/Foto 5.jpg" alt="Foto de Carlos Gray Aguirre">
+                    </div>
                     <p><strong>Carlos Gray Aguirre</strong>
-                    Actor, Escritor y Gestor Cultural con más de 30 años de trayectoria, con 4 publicaciones y director de “La Góndola del Arte”, compañía de teatro. Entre otros, recibe el “Premio a la Trayectoria Cultural de la Araucanía” por parte de la SEREMI de las Culturas, las Artes y el Patrimonio en 2022.</p>
+                    Actor, Escritor y Gestor Cultural con más de 30 años de trayectoria en el territorio lacustre andino, director de “La Góndola del Arte”, compañía de teatro. Entre otros, recibió el “Premio a la Trayectoria Cultural de la Araucanía” por parte de la SEREMI de las Culturas, las Artes y el Patrimonio en 2022.</p>
+                    <p><strong>Publicaciones</strong></p>
+                    <ul class="publications-list">
+                        <li>Gotán, tangos del otro patio (RIL Editores, 2012)</li>
+                        <li>Los archivos de la memoria, la historia no contada de Pucón (Ril Editores, 2017)</li>
+                        <li>Vidas Robadas (Mago Ediciones, 2019. También publicado en Editorial Loayza, Pinar del Río, Cuba 2023)</li>
+                        <li>Sacar a $100 (Publicación independiente, 2023)</li>
+                        <li>Vanidades del humedal (Editorial Ácana, Camagüey, Cuba 2025)</li>
+                    </ul>
                 </div>
 
                 <div class="team-member">
                     <h4>Coordinadora de Estrategia y Desarrollo (Proyectos)</h4>
-                    <img src="assets/images/Foto 6.jpg" alt="Foto de Natalia Navarrete Cavieres">
+                    <div class="img-container">
+                        <img src="assets/images/Foto 6.jpg" alt="Foto de Natalia Navarrete Cavieres">
+                    </div>
                     <p><strong>Natalia Navarrete Cavieres</strong>
                     Administradora Pública, Magíster en Gestión Educacional, Diplomada en Gestión de Proyectos Municipales y Diplomada en Gobiernos Locales Transformadores.<br>
                     Diseñadora y Coordinadora General de uno de los 11 proyectos del mundo ganadores del Fondo Internacional para la Diversidad Cultural de UNESCO, versión 2022. Formuladora y coordinadora de diversos proyectos de asociatividad municipal en vinculación con las comunidades.</p>
@@ -253,10 +336,22 @@
 
                 <div class="team-member">
                     <h4>Coordinadora de Medios y Comunidades</h4>
-                    <img src="assets/images/Foto 7.jpg" alt="Foto de Daniela Navarrete Cavieres">
+                    <div class="img-container">
+                        <img src="assets/images/Foto 7.jpg" alt="Foto de Daniela Navarrete Cavieres">
+                    </div>
                     <p><strong>Daniela Navarrete Cavieres</strong>
                     Fotógrafa Profesional, Gestora Cultural, Guía Educativa y Tallerista de Técnica de Cianotipia. Creadora y colaboradora de múltiples proyectos culturales comunitarios autofinanciados.</p>
                 </div>
+
+                <div class="team-member">
+                    <h4>Colaborador</h4>
+                    <div class="img-container">
+                        <img src="assets/images/Foto Armando Zapata.jpeg" alt="Foto de Armando Zapata Silva">
+                    </div>
+                    <p><strong>Armando Zapata Silva</strong>
+                    Colaborador con larga trayectoria en radio y televisión, apoya aspectos técnicos de las actividades de la Corporación y forma parte de su Directorio. Artista visual (pintura en diversas técnicas) y gestor cultural.</p>
+                </div>
+
             </section>
         </div>
     </main>
