@@ -14,7 +14,7 @@
             line-height: 1.6;
         }
         header {
-            background-color: #e8f8c1; /* Fondo del header (igual que en index) */
+            background-color: #e8f8c1; /* Fondo del header (igual que en index y quienes-somos) */
             color: white; /* Color de texto del header */
             padding: 15px 0;
             text-align: center;
@@ -34,7 +34,7 @@
         }
 
         nav {
-            background-color: #eee5bf; /* Fondo de la barra de navegación (igual que en index) */
+            background-color: #eee5bf; /* Fondo de la barra de navegación (igual que en index y quienes-somos) */
             padding: 10px 0;
             text-align: center;
             display: flex;
@@ -42,16 +42,17 @@
             justify-content: center;
         }
         nav a {
-            color: black; /* Color del texto de los enlaces de navegación (igual que en index) */
+            color: black; /* Color del texto de los enlaces de navegación (igual que en index y quienes-somos) */
             text-decoration: none;
             padding: 8px 12px;
-            font-size: 0.95em;
+            font-size: 1.1em; /* Ajustado para que sea igual que en index y quienes-somos */
             margin: 5px 5px;
             border-radius: 4px;
             transition: background-color 0.3s;
+            font-weight: bold; /* Añadido para que sea igual que en index y quienes-somos */
         }
         nav a:hover {
-            background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
+            background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index y quienes-somos) */
         }
 
         .main-content-centered {
@@ -60,14 +61,15 @@
             padding: 20px;
         }
         .main-content-centered h2 { /* Título de sección (Noticias, Líneas de Trabajo, etc.) */
-            color: #3A5F0B; /* Color del título (igual que en index para h2 de Noticias) */
+            color: #000000; /* Cambiado a negro para consistencia con h2 en "Quiénes Somos" */
             text-align: center;
             margin-top: 30px;
             margin-bottom: 25px;
             font-size: 2em;
+            font-weight: bold; /* Añadido para consistencia */
         }
 
-        /* NUEVOS ESTILOS PARA "LÍNEAS DE TRABAJO" (Adaptados de .noticia en index) */
+        /* ESTILOS PARA "LÍNEAS DE TRABAJO" */
         .main-content-centered ol {
             list-style: none; /* Quitar numeración si se prefiere un estilo de "tarjetas" */
             padding-left: 0;  /* Quitar padding por defecto de la lista */
@@ -89,12 +91,13 @@
             border-radius: 6px;
         }
         .linea-item strong { /* Título de cada línea de trabajo */
-            display: block; 
-            color: #3A5F0B; /* Color del título de cada línea de trabajo */
-            font-size: 1.5em; 
+            display: block;  
+            color: #000000; /* Cambiado a negro para consistencia con otros títulos de sección */
+            font-size: 1.7em; /* Ajustado para ser consistente con h3 en "Quiénes Somos" */
             margin-top: 0;
             margin-bottom: 15px;
-            text-align: left;
+            text-align: center; /* Centrado de los títulos de las líneas de trabajo */
+            font-weight: bold; /* Añadido para consistencia */
         }
         .linea-item p {
             text-align: justify;
@@ -104,16 +107,17 @@
         }
 
         footer {
-            background-color: #f0f0f0; /* Fondo del footer (igual que en index) */
-            color: #333; /* Color de texto del footer (igual que en index) */
+            background-color: #e8f8c1; /* Fondo del footer (igual que en index y quienes-somos) */
+            color: #333; /* Color de texto del footer (igual que en index y quienes-somos) */
             text-align: center;
             padding: 20px;
             margin-top: 30px;
-            font-size: 0.9em;
+            font-size: 1.1em; /* Ajustado para que sea igual que en index y quienes-somos */
         }
         footer a {
-            color: #3A5F0B; /* Color de enlaces en el footer (igual que en index) */
+            color: black; /* Cambiado a negro para que sea igual que en index y quienes-somos */
             text-decoration: none;
+            font-weight: bold; /* Añadido para que sea igual que en index y quienes-somos */
         }
         footer a:hover {
             text-decoration: underline;
@@ -136,7 +140,8 @@
 
     <main>
         <div class="main-content-centered">
-            <section> <h2>Líneas de Trabajo</h2>
+            <section> 
+                <h2>Líneas de Trabajo</h2>
                 <ol>
                     <li class="linea-item">
                         <strong>Fortalecimiento de ecosistemas culturales y creativos</strong>
