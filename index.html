@@ -241,6 +241,45 @@
             background-color: #d0e8a1;
         }
 
+        /* Estilos para la galería de fotos */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 10px; /* Space between images */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .large-image {
+            grid-column: 1 / -1; /* Spans across all columns */
+            margin-top: 10px; /* Space between mosaic and large image */
+        }
+
+        /* Estilo para el pie de foto */
+        .photo-credit {
+            font-size: 0.9em; /* Más pequeño que el texto normal */
+            color: #666; /* Un color más suave */
+            text-align: right; /* Alineado a la derecha como en la imagen */
+            margin-top: 10px; /* Espacio arriba */
+            margin-bottom: 20px; /* Espacio abajo */
+            padding-right: 20px; /* Espacio a la derecha si está dentro de main-content-centered */
+        }
+
+
+        @media (max-width: 600px) {
+            .gallery-container {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+        }
+
 
         footer {
             background-color: #e8f8c1;
@@ -285,17 +324,25 @@
         <div class="main-content-centered">
             <section class="welcome-section">
                 <p><strong>Bienvenidos a la Corporación Cultural Antulelbún</strong></p>
-                <p>Somos una ONG sin fines de lucro fundada en 2023 por la poeta Norka Sepúlveda, dedicada al fomento y desarrollo de la cultura y las artes.</p>
+                <p>Somos una ONG sin fines de lucro fundada en 2023 por la profesora normalista y poeta Norka Sepúlveda, dedicada al fomento y desarrollo de la cultura y las artes.</p>
             </section>
-
+            <h2>Actividades Recientes</h2>
             <section id="prensa">
                 <div class="noticia">
-                    <h3>Éxitosa ruta patrimonial teatralizada en Pucón cautiva a la comunidad</h3>
+                    <h3>Exitosa ruta patrimonial teatralizada en Pucón cautiva a la comunidad</h3>
                     <p>La <strong>Ruta Patrimonial Teatralizada "Un paseo por la memoria de Pucón"</strong> se desarrolló con gran éxito el pasado domingo 25 de mayo, adaptándose a las inclemencias climáticas en un formato indoor en el <strong>Campus Pucón de la Universidad de La Frontera</strong>. Cerca de <strong>100 asistentes</strong> disfrutaron de una experiencia inmersiva que, a través de personajes históricos ficticios, permitió revivir momentos clave de la historia local contenida en <em>Los Archivos de la Memoria: La Historia No Contada de Pucón</em>, obra de <strong>Carlos Gray A.</strong></p>
                     <p>El evento, organizado por la <strong>Corporación Cultural Antulelbún</strong> con colaboración de la <strong>Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón</strong>, sorprendió y fascinó al público, que elogió la puesta en escena y la adaptación del recorrido a un espacio cerrado. Actores con vestuario teatral y elementos audiovisuales transformaron la jornada en un relato vivo y dinámico, fortaleciendo el vínculo de la comunidad con su identidad cultural.</p>
                     <p>Esta actividad formó parte del catálogo de actividades de celebración del Día de los Patrimonios 2025, a nivel nacional, del Ministerio de las Culturas, las Artes y el Patrimonio.</p>
                     <p>La exitosa realización de esta iniciativa demuestra el compromiso de Pucón con la promoción y preservación de su patrimonio, consolidando a la ONG Corporación Cultural Antulelbún como un agente cultural líder de una experiencia innovadora que acerca a las personas a su historia de manera creativa y participativa.</p>
                     <p>Revisa las imágenes del evento acá:</p>
+                    <div class="gallery-container">
+                        <div class="gallery-item"><img src="assets/images/Foto Actividad 1.jpeg" alt="Imagen de la actividad 1"></div>
+                        <div class="gallery-item"><img src="assets/images/Foto Actividad 2.jpeg" alt="Imagen de la actividad 2"></div>
+                        <div class="gallery-item"><img src="assets/images/Foto Actividad 3.jpeg" alt="Imagen de la actividad 3"></div>
+                        <div class="gallery-item"><img src="assets/images/Foto Actividad 4.jpeg" alt="Imagen de la actividad 4"></div>
+                        <div class="gallery-item large-image"><img src="assets/images/Foto Actividad 5.jpeg" alt="Imagen de la actividad 5"></div>
+                    </div>
+                    <p class="photo-credit">Fotografías: Salvador Bravo Melin.</p>
                 </div>
 
                 <div class="noticia">
